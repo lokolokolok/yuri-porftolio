@@ -1,0 +1,115 @@
+.about {
+    background-color: rgba(11, 14, 39, 0.7);
+    border-radius: var(--border-radius);
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 95%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border: 3px solid rgba(74, 144, 226, 0.3);
+    animation: pulse 2s infinite;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  
+  .about-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  .about-text {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .about-section {
+    margin-bottom: 2rem;
+  }
+  
+  .about-section h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.4);
+  }
+  
+  .about-section h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+  
+  .about-section:hover h3::after {
+    width: 100%;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills-list li {
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--light-text);
+  }
+  
+  .skills-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+  }
+  
+  .about-section p {
+    color: var(--light-text);
+    line-height: 1.8;
+  }
+  
+  .about-section strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+  
+    .about-image {
+      width: 100%;
+    }
+  }
+  
